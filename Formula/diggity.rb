@@ -5,21 +5,21 @@
 class Diggity < Formula
   desc "BOM Diggity’s primary purpose is to ensure the security and integrity of software programs. It incorporates secret analysis allowing the user to secure crucial information before deploying any parts of the application to the public."
   homepage "https://www.carbonetes.com/"
-  version "1.14.1"
+  version "1.14.2"
   license "Apache License 2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/carbonetes/diggity/releases/download/v1.14.1/diggity_1.14.1_darwin_arm64.tar.gz"
-      sha256 "99fc2826936fc9aade17e38765548da7a1ffbef10a3651863f42ebf112365968"
+      url "https://github.com/carbonetes/diggity/releases/download/v1.14.2/diggity_1.14.2_darwin_arm64.tar.gz"
+      sha256 "c4cc3c07ef193d943c2d6db41726e027dead5876957dfdf9974404a66c089071"
 
       def install
         bin.install "diggity"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/carbonetes/diggity/releases/download/v1.14.1/diggity_1.14.1_darwin_amd64.tar.gz"
-      sha256 "2f93a1cd8cc3da7f347ffd91409fd46c0a624f717468a73bdaca1b1454a4032b"
+      url "https://github.com/carbonetes/diggity/releases/download/v1.14.2/diggity_1.14.2_darwin_amd64.tar.gz"
+      sha256 "edcde5a82381352ab699b7a8613f1ccd93bc2489dbe9af51bbbe9082b16ff101"
 
       def install
         bin.install "diggity"
@@ -29,16 +29,16 @@ class Diggity < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/carbonetes/diggity/releases/download/v1.14.1/diggity_1.14.1_linux_arm64.tar.gz"
-      sha256 "3ac951d49ff2cf554ed34526085a4969e517946795151aeb0c478868e2b5356f"
+      url "https://github.com/carbonetes/diggity/releases/download/v1.14.2/diggity_1.14.2_linux_arm64.tar.gz"
+      sha256 "539bd6e9362a52937bfa712ffd495035fda4b6e7ccf19c70981803aeb6126faa"
 
       def install
         bin.install "diggity"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/carbonetes/diggity/releases/download/v1.14.1/diggity_1.14.1_linux_amd64.tar.gz"
-      sha256 "b4b9253a03d0c60d89d042914186e1a6b7f6c5978005a0c63f950b143c7936b2"
+      url "https://github.com/carbonetes/diggity/releases/download/v1.14.2/diggity_1.14.2_linux_amd64.tar.gz"
+      sha256 "9b852adcdb10aa3d63a50b5fb68760698b4cf862fd4a0e0bf3f21a8626811177"
 
       def install
         bin.install "diggity"
