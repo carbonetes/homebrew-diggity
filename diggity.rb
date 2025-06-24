@@ -5,21 +5,21 @@
 class Diggity < Formula
   desc "BOM Diggity’s primary purpose is to ensure the security and integrity of software programs. It incorporates secret analysis allowing the user to secure crucial information before deploying any parts of the application to the public."
   homepage "https://www.carbonetes.com/"
-  version "1.17.2"
+  version "1.17.3"
   license "Apache License 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/carbonetes/diggity/releases/download/v1.17.2/diggity_1.17.2_darwin_amd64.tar.gz"
-      sha256 "0df0f6a65428ffa8d37513249d31ab602017dbfcf6fe7048bacb3c9784872e11"
+      url "https://github.com/carbonetes/diggity/releases/download/v1.17.3/diggity_1.17.3_darwin_amd64.tar.gz"
+      sha256 "6a724d1be9a80ca99a8d87afc35adef9d87dbb5102e8e2b8b810bd0fb8c09fb5"
 
       def install
         bin.install "diggity"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/carbonetes/diggity/releases/download/v1.17.2/diggity_1.17.2_darwin_arm64.tar.gz"
-      sha256 "a63c659408edd1a4e013c08163a52395342a2d4c65b130f5ef8df66f95628a7e"
+      url "https://github.com/carbonetes/diggity/releases/download/v1.17.3/diggity_1.17.3_darwin_arm64.tar.gz"
+      sha256 "1399d822c4240ea9d4ef6403b712310e7636c7a344000618bc74937949eee4bc"
 
       def install
         bin.install "diggity"
@@ -28,24 +28,18 @@ class Diggity < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/carbonetes/diggity/releases/download/v1.17.2/diggity_1.17.2_linux_amd64.tar.gz"
-        sha256 "e857445d475f5779f5da09f281bc81fd0b414607d492677f0ceff74d636f24aa"
-
-        def install
-          bin.install "diggity"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/carbonetes/diggity/releases/download/v1.17.3/diggity_1.17.3_linux_amd64.tar.gz"
+      sha256 "093d600181b3589f1959ce8566b6a10905f61b6c3391946c1d0cc5308fb32d64"
+      def install
+        bin.install "diggity"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/carbonetes/diggity/releases/download/v1.17.2/diggity_1.17.2_linux_arm64.tar.gz"
-        sha256 "9f9177fe7654a2c2c575b62203ac80e792198ae5d6cfe8ea3f7aadb3980b89b8"
-
-        def install
-          bin.install "diggity"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/carbonetes/diggity/releases/download/v1.17.3/diggity_1.17.3_linux_arm64.tar.gz"
+      sha256 "bc10395a85147d35eab793475ad9a81d98018db6fd0ca0ff5909ab2e1820d3e7"
+      def install
+        bin.install "diggity"
       end
     end
   end
